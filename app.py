@@ -20,7 +20,7 @@ app.title = 'Image Processing App'
 server = app.server
 ########################################
 
-image_ops = ['None', 'Equalize', 'Flip', 'Mirror', 'Binarize', 'Invert', 'Solarize']
+image_ops = ['Orginal Image', 'Equalize', 'Flip', 'Mirror', 'Binarize', 'Invert', 'Solarize']
 
 tab_style = {
     'borderBottom': '1px solid #d6d6d6',
