@@ -69,38 +69,38 @@ app.layout = html.Div([
                 multiple=True
             ),
         ], style={'paddingTop' : 50}),
-#         html.Div([
-#             dcc.Tabs(
-#                 id='image-processors-tabs',
-#                 value='operators',
-#                 children=[
-#                     dcc.Tab(
-#                         label='Change oeration heare',
-#                         value='operators',
-#                         style=tab_style,
-#                         selected_style=tab_selected_style,
-#                         children=[
-#                             html.Div([
-#                                 daq.ToggleSwitch(
-#                                     id='image-mode',
-#                                     size=60,
-#                                     label='Gray Scale',
-#                                     labelPosition='top',
-#                                     color='#717171',
-#                                     value=False,
-#                                 )
-#                             ], style={'paddingTop' : 30, 'paddingBottom' : 10}),
-#                             html.Div([
-#                                 dcc.RadioItems(
-#                                     id='in-operation', 
-#                                     options=[{'label' : op, 'value' : op.lower()} for op in image_ops],
-#                                     value='none'
-#                                 ),
-#                             ], className='select-operation')
-#                         ]
-#                     ),
-#                 ]
-#             )
+        html.Div([
+            dcc.Tabs(
+                id='image-processors-tabs',
+                value='operators',
+                children=[
+                    dcc.Tab(
+                        label='Change oeration heare',
+                        value='operators',
+                        style=tab_style,
+                        selected_style=tab_selected_style,
+                        children=[
+                            html.Div([
+                                daq.ToggleSwitch(
+                                    id='image-mode',
+                                    size=60,
+                                    label='Gray Scale',
+                                    labelPosition='top',
+                                    color='#717171',
+                                    value=False,
+                                )
+                            ], style={'paddingTop' : 30, 'paddingBottom' : 10}),
+                            html.Div([
+                                dcc.RadioItems(
+                                    id='in-operation', 
+                                    options=[{'label' : op, 'value' : op.lower()} for op in image_ops],
+                                    value='none'
+                                ),
+                            ], className='select-operation')
+                        ]
+                    ),
+                ]
+            )
         ], className='tab-div')
     ], className='flex-item-left'),
 
