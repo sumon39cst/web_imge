@@ -16,11 +16,11 @@ external_stylesheets = [
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.config['suppress_callback_exceptions'] = True
-app.title = 'Image Processing App'
+app.title = 'Image processing in heruko server'
 server = app.server
 ########################################
 
-image_ops = ['Orginal Image', 'Equalize', 'Flip', 'Mirror', 'Binarize', 'Invert', 'Solarize']
+image_ops = ['Orginal Image', 'Histrogram Equlization', 'Flip', 'Mirror', 'Binarize', 'Invert', 'Solarize']
 
 tab_style = {
     'borderBottom': '1px solid #d6d6d6',
@@ -75,7 +75,7 @@ app.layout = html.Div([
                 value='operators',
                 children=[
                     dcc.Tab(
-                        label='Operations',
+                        label='Change oeration heare',
                         value='operators',
                         style=tab_style,
                         selected_style=tab_selected_style,
@@ -123,7 +123,7 @@ def set_output_layout(which_tab):
         in_out_image_div = html.Div([
             html.Div( 
                 children= [
-                    html.H5('Image Used - Output'),
+                    html.H5('Out Put Visulization'),
                     dcc.Loading(
                         id='loading-op',
                         type='dot',
@@ -137,7 +137,7 @@ def set_output_layout(which_tab):
         in_out_image_div = html.Div([
             html.Div( 
                 children= [
-                    html.H5('Image Used - Output'),
+                    html.H5('Out Put Visulization'),
                     dcc.Loading(
                         id='loading-morph',
                         type='dot',
