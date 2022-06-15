@@ -11,7 +11,7 @@ from image_ops_scratch import (ImageOperations, read_image_string)
 
 ########################################
 external_stylesheets = [
-#     'https://codepen.io/chriddyp/pen/bWLwgP.css'
+    'https://codepen.io/chriddyp/pen/bWLwgP.css'
 ]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
