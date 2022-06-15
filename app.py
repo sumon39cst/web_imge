@@ -84,7 +84,7 @@ app.layout = html.Div([
                                 daq.ToggleSwitch(
                                     id='image-mode',
                                     size=60,
-                                    label='Gray Scale',
+#                                     label='Gray Scale',
                                     labelPosition='top',
                                     color='#717171',
                                     value=False,
@@ -93,7 +93,7 @@ app.layout = html.Div([
                             html.Div([
                                 dcc.RadioItems(
                                     id='in-operation', 
-                                    options=[{'label' : op, 'value' : op.lower()} for op in image_ops],
+#                                     options=[{'label' : op, 'value' : op.lower()} for op in image_ops],
                                     value='none'
                                 ),
                             ], className='select-operation')
