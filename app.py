@@ -81,7 +81,7 @@ app.layout = html.Div([
                         selected_style=tab_selected_style,
                         children=[
                             html.Div([
-#                                 daq.ToggleSwitch(
+                                daq.ToggleSwitch(
                                     id='image-mode',
                                     size=60,
 #                                     label='Gray Scale',
