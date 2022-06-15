@@ -11,7 +11,7 @@ from image_ops_scratch import (ImageOperations, read_image_string)
 
 ########################################
 external_stylesheets = [
-    'https://codepen.io/chriddyp/pen/bWLwgP.css'
+#     'https://codepen.io/chriddyp/pen/bWLwgP.css'
 ]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
@@ -81,7 +81,7 @@ app.layout = html.Div([
                         selected_style=tab_selected_style,
                         children=[
                             html.Div([
-                                daq.ToggleSwitch(
+#                                 daq.ToggleSwitch(
                                     id='image-mode',
                                     size=60,
 #                                     label='Gray Scale',
@@ -93,7 +93,7 @@ app.layout = html.Div([
                             html.Div([
                                 dcc.RadioItems(
                                     id='in-operation', 
-#                                     options=[{'label' : op, 'value' : op.lower()} for op in image_ops],
+                                    options=[{'label' : op, 'value' : op.lower()} for op in image_ops],
                                     value='none'
                                 ),
                             ], className='select-operation')
